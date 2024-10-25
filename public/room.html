@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Room</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+  <script defer type="module" src="auth.js"></script>
+  <script defer type="module" src="chat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Chat Room</h1>
+
+    <!-- Display User's Info -->
+    <div id="room-info">
+      <p id="user-displayname">Welcome, </p>
+      <p id="room-name-display">Room: </p>
+    </div>
+
+    <!-- Room Details Entry -->
+    <div id="room-section">
+      <h2>Enter Room Details</h2>
+      <input type="text" id="room-name" placeholder="Enter room name" required>
+      <button id="enter-room">Enter Room</button>
+      <button id="logout">Log Out</button>
+    </div>
+
+    <!-- Chat Section -->
+    <div id="chat-section" style="display: none;">
+      <h2>Chat Room</h2>
+      <div id="chat-box"></div>
+      <input type="text" id="chat-message" placeholder="Type a message" required>
+      <button id="send-message">Send</button>
+      <button id="logout-chat">Log Out</button>
+    </div>
+  </div>
+</body>
+</html>
