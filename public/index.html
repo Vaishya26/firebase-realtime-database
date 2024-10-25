@@ -3,19 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firebase Realtime Chat Demo</title>
+    <title>Chat Registration and Login</title>
+    <style>
+        #chat-container {
+            display: none; /* Hide the chat window initially */
+        }
+    </style>
 </head>
 <body>
     <h1>Real-time Chat Application</h1>
-    
-    <div id="chat-window">
-        <ul id="messages"></ul>
-    </div>
-    
-    <input type="text" id="message-input" placeholder="Type your message here...">
-    <button id="send-message-btn">Send</button>
 
-    <!-- Use type="module" to allow ES6 imports -->
+    <!-- Registration Form -->
+    <div id="register-container">
+        <h3>Register</h3>
+        <input type="text" id="first-name-input" placeholder="First Name">
+        <input type="text" id="last-name-input" placeholder="Last Name">
+        <input type="email" id="email-input-register" placeholder="Email">
+        <input type="password" id="password-input-register" placeholder="Password">
+        <button id="register-btn">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-container">
+        <h3>Login</h3>
+        <input type="email" id="email-input" placeholder="Email">
+        <input type="password" id="password-input" placeholder="Password">
+        <button id="login-btn">Login</button>
+    </div>
+
+    <!-- Chat window (hidden initially) -->
+    <div id="chat-container">
+        <div id="chat-window">
+            <ul id="messages"></ul>
+        </div>
+
+        <input type="text" id="message-input" placeholder="Type your message here...">
+        <button id="send-message-btn">Send</button>
+    </div>
+
     <script type="module" src="/app.js"></script>
 </body>
 </html>
